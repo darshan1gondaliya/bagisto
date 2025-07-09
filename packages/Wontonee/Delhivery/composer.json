@@ -1,0 +1,26 @@
+{
+    "name": "wontonee/delhivery",
+    "description": "Delhivery Shipping Module for Bagisto",
+    "type": "bagisto-module",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your@email.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wontonee\\Delhivery\\Providers\\ModuleServiceProvider",
+                "Wontonee\\Delhivery\\Providers\\DelhiveryServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Wontonee\\Delhivery\\": "src/"
+        }
+    }
+}

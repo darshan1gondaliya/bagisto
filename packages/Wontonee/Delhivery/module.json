@@ -1,0 +1,22 @@
+{
+    "name": "Delhivery Shipping",
+    "slug": "delhivery",
+    "version": "1.0.0",
+    "author": "Your Name",
+    "description": "Delhivery Shipping Integration for Bagisto 2.3",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wontonee\\Delhivery\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wontonee\\Delhivery\\Providers\\ModuleServiceProvider",
+                "Wontonee\\Delhivery\\Providers\\DelhiveryServiceProvider"
+            ]
+        }
+    }
+}
