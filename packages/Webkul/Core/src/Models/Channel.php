@@ -127,6 +127,25 @@ class Channel extends TranslatableModel implements ChannelContract
     }
 
     /**
+     * Get dark logo image url.
+     */
+    public function dark_logo_url()
+    {
+        if (! $this->dark_logo) {
+            return;
+        }
+
+        return Storage::url($this->dark_logo);
+    }
+
+    /**
+     * Get dark logo image url.
+     */
+    public function getDarkLogoUrlAttribute()
+    {
+        return $this->dark_logo_url();
+    }
+    /**
      * Get favicon image url.
      */
     public function favicon_url()

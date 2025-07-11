@@ -32,10 +32,10 @@
                 aria-label="@lang('shop::app.customers.reset-password.bagisto')"
             >
                 <img
-                    src="{{ core()->getCurrentChannel()->logo_url ?? bagisto_asset('images/logo.svg') }}"
+                    src="{{ core()->getCurrentChannel()->dark_logo_url ?? bagisto_asset('images/logo.svg') }}"
                     alt="{{ config('app.name') }}"
-                        width="150"
-                        height="40"
+                        width="180"
+                        height="45"
                 >
             </a>
         </div>

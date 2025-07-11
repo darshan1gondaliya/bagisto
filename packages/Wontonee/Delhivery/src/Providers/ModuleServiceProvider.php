@@ -39,8 +39,5 @@ class ModuleServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             dirname(__DIR__) . '/Config/system.php', 'core'
         );
-        $this->mergeConfigFrom(
-            dirname(__DIR__) . '/Config/admin-menu.php', 'menu.admin'
-        );
     }
 }

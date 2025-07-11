@@ -1,0 +1,23 @@
+{
+    "name": "webkul/dhl-shipping",
+    "description": "DHL Shipping Module for Bagisto",
+    "type": "bagisto-module",
+    "version": "2.3.0",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\DHLShipping\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\DHLShipping\\Providers\\ModuleServiceProvider"
+            ]
+        }
+    }
+}

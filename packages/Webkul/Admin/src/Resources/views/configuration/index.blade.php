@@ -12,7 +12,7 @@
 
         <!-- Configuration Search Bar Vue Component -->
         <v-configuration-search>
-            <div class="relative flex w-[525px] max-w-[525px] items-center max-lg:w-[400px] ltr:ml-2.5 rtl:mr-2.5">
+            <div class="relative flex w-[525px] max-w-[525px] responsive-mobile-view items-center max-lg:w-[400px] ltr:ml-2.5 rtl:mr-2.5">
                 <i class="icon-search absolute top-1.5 flex items-center text-2xl ltr:left-3 rtl:right-3"></i>
 
                 <input
@@ -76,7 +76,7 @@
 
     @pushOnce('scripts')
         <script type="text/x-template" id="v-configuration-search-template">
-            <div class="relative flex w-[525px] max-w-[525px] items-center max-lg:w-[400px] ltr:ml-2.5 rtl:mr-2.5">
+            <div class="relative flex w-[525px] max-w-[525px] responsive-mobile-view items-center max-lg:w-[400px] ltr:ml-2.5 rtl:mr-2.5">
                 <i class="icon-search absolute top-1.5 flex items-center text-2xl ltr:left-3 rtl:right-3"></i>
 
                 <input

@@ -240,7 +240,7 @@
             @close="onDrawerClose"
         >
             <x-slot:toggle>
-                <span class="icon-hamburger cursor-pointer text-2xl"></span>
+                <span  class="icon-hamburger cursor-pointer text-2xl"></span>
             </x-slot>
 
             <x-slot:header class="bg-blue">

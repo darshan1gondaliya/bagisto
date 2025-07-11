@@ -66,6 +66,8 @@ class ChannelRepository extends Repository
 
         $this->uploadImages($data, $channel);
 
+        $this->uploadImages($data, $channel, 'dark_logo');
+
         $this->uploadImages($data, $channel, 'favicon');
 
         return $channel;

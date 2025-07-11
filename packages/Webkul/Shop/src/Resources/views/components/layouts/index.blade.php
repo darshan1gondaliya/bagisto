@@ -69,6 +69,8 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
         >
+        <link rel="stylesheet" href="{{ asset('themes/shop/default/build/assets/all.min.css') }}">
+
 
         @stack('styles')
 

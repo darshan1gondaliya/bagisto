@@ -106,7 +106,7 @@
             <!-- Page Sidebar Blade Component -->
             <x-admin::layouts.sidebar />
 
-            <div class="flex min-h-[calc(100vh-62px)] max-w-full flex-1 flex-col bg-white pt-3 transition-all duration-300 dark:bg-gray-950 ltr:pl-[270px] group-[.sidebar-collapsed]/container:ltr:pl-[69px] rtl:pr-[270px] group-[.sidebar-collapsed]/container:rtl:pr-[69px]">
+            <div class="flex min-h-[calc(100vh-62px)] max-w-full flex-1 responsive-mobile-view flex-col bg-white pt-3 transition-all duration-300 dark:bg-gray-950 ltr:pl-[270px] group-[.sidebar-collapsed]/container:ltr:pl-[69px] rtl:pr-[270px] group-[.sidebar-collapsed]/container:rtl:pr-[69px]">
                 <!-- Added dynamic tabs for third level menus  -->
                 <div class="px-4 pb-6">
                     <!-- Todo @suraj-webkul need to optimize below statement. -->

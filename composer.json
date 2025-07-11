@@ -46,6 +46,7 @@
         "spatie/laravel-responsecache": "^7.4",
         "spatie/laravel-sitemap": "^7.3",
         "webbycrown/blog-for-bagisto": "dev-main",
+        "webkul/dhl-shipping": "@dev",
         "wontonee/delhivery": "@dev",
         "wontonee/razorpay": "^5.0"
     },
@@ -67,7 +68,6 @@
             "Database\\Seeders\\": "database/seeders/",
             "Webkul\\Admin\\": "packages/Webkul/Admin/src",
             "Webkul\\Attribute\\": "packages/Webkul/Attribute/src",
-            "ACME\\Delhivery\\": "packages/ACME/Delhivery/src",
             "Webkul\\BookingProduct\\": "packages/Webkul/BookingProduct/src",
             "Webkul\\CartRule\\": "packages/Webkul/CartRule/src",
             "Webkul\\CatalogRule\\": "packages/Webkul/CatalogRule/src",
@@ -130,6 +130,10 @@
         }
     },
     "repositories": {
+        "dhl": {
+            "type": "path",
+            "url": "packages/Webkul/DHLShipping"
+        },
         "delhivery": {
             "type": "path",
             "url": "packages/Wontonee/Delhivery"

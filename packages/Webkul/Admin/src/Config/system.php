@@ -212,7 +212,15 @@ return [
                 'type'          => 'image',
                 'channel_based' => false,
                 'validation'    => 'mimes:bmp,jpeg,jpg,png,webp,svg',
-            ], [
+            ],
+            [
+                'name'          => 'dark_logo_image',
+                'title'         => 'admin::app.configuration.index.general.design.admin-logo.dark-logo-image',
+                'type'          => 'image',
+                'channel_based' => false,
+                'validation'    => 'mimes:bmp,jpeg,jpg,png,webp,svg',
+            ],            
+            [
                 'name'          => 'favicon',
                 'title'         => 'admin::app.configuration.index.general.design.admin-logo.favicon',
                 'type'          => 'image',
