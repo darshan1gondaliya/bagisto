@@ -19,7 +19,7 @@
 
 <!-- Features -->
 @if ($customization)
-    <div class="container mt-20 max-lg:px-8 max-md:mt-10 max-md:px-4">
+    <div class="container mt-20 max-lg:px-8 max-md:mt-10 max-md:px-4 usp-container">
         <div class="max-md:max-y-6 flex justify-center gap-6 max-lg:flex-wrap max-md:grid max-md:grid-cols-2 max-md:gap-x-2.5 max-md:text-center">
             @foreach ($customization->options['services'] as $service)
                 <div class="flex items-center gap-5 bg-white max-md:grid max-md:gap-2.5 max-sm:gap-1 max-sm:px-2">
