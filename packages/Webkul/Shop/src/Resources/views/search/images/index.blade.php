@@ -1,7 +1,7 @@
 <v-image-search>
     <button
         type="button"
-        class="icon-camera absolute top-3 flex items-center text-xl max-sm:top-2.5 ltr:right-3 ltr:pr-3 max-md:ltr:right-1.5 rtl:left-3 rtl:pl-3 max-md:rtl:left-1.5"
+        class="icon-camera absolute1 top-3 flex items-center text-xl max-sm:top-2.5 ltr:right-3 ltr:pr-3 max-md:ltr:right-1.5 rtl:left-3 rtl:pl-3 max-md:rtl:left-1.5"
         aria-label="@lang('shop::app.search.images.index.search')"
     >
     </button>
@@ -14,7 +14,7 @@
     >
         <div>
             <label
-                class="icon-camera absolute top-3 flex items-center text-xl max-sm:top-2.5 ltr:right-3 ltr:pr-3 max-md:ltr:right-1.5 rtl:left-3 rtl:pl-3 max-md:rtl:left-1.5"
+                class="icon-camera absolute2 top-3 flex items-center text-xl max-sm:top-2.5 ltr:right-3 ltr:pr-3 max-md:ltr:right-1.5 rtl:left-3 rtl:pl-3 max-md:rtl:left-1.5 bg-white h-10"
                 aria-label="@lang('shop::app.search.images.index.search')"
                 :for="'v-image-search-' + $.uid"
                 v-if="! isSearching"
@@ -22,7 +22,7 @@
             </label>
 
             <label
-                class="absolute top-2.5 flex cursor-pointer items-center text-xl ltr:right-3 ltr:pr-3 max-md:ltr:pr-1 rtl:left-3 rtl:pl-3 max-md:rtl:pl-1"
+                class="absolute3 top-2.5 flex cursor-pointer items-center text-xl ltr:right-3 ltr:pr-3 max-md:ltr:pr-1 rtl:left-3 rtl:pl-3 max-md:rtl:pl-1"
                 v-else
             >
                 <!-- Spinner -->

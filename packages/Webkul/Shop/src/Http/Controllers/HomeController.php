@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Mail;
 use Webkul\Shop\Http\Requests\ContactRequest;
 use Webkul\Shop\Mail\ContactUs;
 use Webkul\Theme\Repositories\ThemeCustomizationRepository;
+use Illuminate\Support\Facades\Log;
+
 
 class HomeController extends Controller
 {
@@ -66,21 +68,31 @@ class HomeController extends Controller
      */
     public function sendContactUsMail(ContactRequest $contactRequest)
     {
+        $contactData = $contactRequest->only([
+            'name',
+            'email',
+            'contact',
+            'message',
+        ]);
+    
+        Log::info('📩 Contact Us Request Received', $contactData);
+    
         try {
-            Mail::queue(new ContactUs($contactRequest->only([
-                'name',
-                'email',
-                'contact',
-                'message',
-            ])));
-
+            Mail::queue(new ContactUs($contactData));
+    
+            Log::info('✅ Contact Us email queued successfully.');
+    
             session()->flash('success', trans('shop::app.home.thanks-for-contact'));
         } catch (\Exception $e) {
+            Log::error('❌ Failed to send Contact Us email: ' . $e->getMessage(), [
+                'trace' => $e->getTraceAsString(),
+            ]);
+    
             session()->flash('error', $e->getMessage());
-
             report($e);
         }
-
+    
         return back();
     }
+    
 }

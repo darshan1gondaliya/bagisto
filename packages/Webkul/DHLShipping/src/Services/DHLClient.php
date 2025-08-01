@@ -24,7 +24,7 @@ class DHLClient
             'totalValue' => $orderTotal,
             'isCustomsDeclarable' => false
         ]);
-
+        //dd($response->json());
         if ($response->successful()) {
             return $this->parseRates($response->json());
         }

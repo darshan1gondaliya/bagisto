@@ -9,6 +9,7 @@ use Webkul\Shop\Http\Controllers\ProductController;
 use Webkul\Shop\Http\Controllers\ProductsCategoriesProxyController;
 use Webkul\Shop\Http\Controllers\SearchController;
 use Webkul\Shop\Http\Controllers\SubscriptionController;
+use Webkul\Shop\Http\Controllers\CustomRazorpayController;
 
 /**
  * CMS pages.
@@ -78,3 +79,7 @@ Route::controller(ProductController::class)->group(function () {
  */
 Route::get('booking-slots/{id}', [BookingProductController::class, 'index'])
     ->name('shop.booking-product.slots.index');
+
+Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function () {
+    Route::get('razorpay-redirect', [CustomRazorpayController::class, 'paymentRedirect'])->name('razorpay.process');
+});

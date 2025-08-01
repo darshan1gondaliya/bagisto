@@ -89,7 +89,6 @@ class Delhivery extends AbstractShipping
         $rate->method_description = $this->getConfigData('description');
         $rate->price = $price;
         $rate->base_price = $price;
-        
         return $rate;
     }
 
@@ -99,23 +98,26 @@ class Delhivery extends AbstractShipping
     protected function getApiRates(): array
     {
         $cart = Cart::getCart();
-
+    
+        $paymentMethod = optional($cart->payment)->method;
+    
         $response = Http::withHeaders([
             'Authorization' => 'Token ' . $this->getConfigData('api_token'),
             'Accept' => 'application/json'
         ])->post($this->getConfigData('api_url') . '/api/kinko/v1/invoice/charges/.json', [
-            'pickup_location' => $this->getConfigData('warehouse_pincode'),
-            'delivery_location' => $cart->shipping_address->postcode,
-            'weight' => $cart->items->sum('weight'),
-            'payment_mode' => $cart->payment->method === 'cashondelivery' ? 'COD' : 'Prepaid',
-            'cod_amount' => $cart->payment->method === 'cashondelivery' ? $cart->grand_total : 0,
-            'client_name' => $this->getConfigData('client_name')
+            'pickup_location'  => $this->getConfigData('warehouse_pincode'),
+            'delivery_location'=> $cart->shipping_address->postcode ?? '',
+            'weight'           => $cart->items->sum('weight'),
+            'payment_mode'     => $paymentMethod === 'cashondelivery' ? 'COD' : 'Prepaid',
+            'cod_amount'       => $paymentMethod === 'cashondelivery' ? $cart->grand_total : 0,
+            'client_name'      => $this->getConfigData('client_name')
         ]);
-
+    
         if (! $response->successful()) {
             throw new \Exception($response->body());
         }
-
+    
         return $response->json();
     }
+    
 }
