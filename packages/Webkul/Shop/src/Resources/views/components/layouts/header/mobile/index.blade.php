@@ -209,7 +209,7 @@ $showWishlist = (bool) core()->getConfigData('customer.settings.wishlist.wishlis
             value="{{ request('query') }}"
             placeholder="@lang('shop::app.components.layouts.header.mobile.search-text')"
             required
-            class="flex-grow search-box text-sm w-[90%] text-gray-900 placeholder-gray-400 px-3 py-2 focus:outline-none max-sm:text-xs max-sm:py-1.5 max-sm:px-2" />
+            class="flex-grow search-box text-sm w-full text-gray-900 placeholder-gray-400 px-3 py-2 focus:outline-none max-sm:text-xs max-sm:py-1.5 max-sm:px-2" />
 
         {{-- Image Search Icon (if enabled in config) --}}
         @if (core()->getConfigData('catalog.products.settings.image_search'))

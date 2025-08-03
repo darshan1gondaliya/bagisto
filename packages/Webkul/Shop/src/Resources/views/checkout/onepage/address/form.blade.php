@@ -283,7 +283,7 @@
             loadGoogleApi() {
                 if (window.google?.maps?.places) return this.initAutocomplete();
                 const script = document.createElement('script');
-                script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAydQrfVtyfPCoKSGIgxqp18XT6WX_qU&libraries=places`;
+                script.src = `https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&libraries=places`;
                 script.async = true;
                 script.defer = true;
                 script.onload = this.initAutocomplete;
